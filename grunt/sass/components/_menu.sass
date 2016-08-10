@@ -1,0 +1,277 @@
+.menuPage
+	background-image: url('../img/WoodenTable.jpg')
+	background-position: top center
+	background-repeat: repeat-y
+	background-size: 100% auto
+
+	.optionSelect
+		@extend %fl
+		margin-bottom: 0
+
+.menuDownload
+	width: 170px !important
+	display: none
+	@extend %fr
+	margin-bottom: -10px
+	position: relative
+	z-index: 500
+
+	&.active
+		display: block
+
+.menu-container
+	@extend %pos-rel
+	@extend %dis-block
+	margin-bottom: 100px
+
+.menu-wrap
+	@extend %margin-double-bottom
+	@extend %margin-double-top
+	@extend %padding-half-sides
+	@extend %padding-top
+	@extend %lap--padding-sides
+	background: #fbfaec
+	border-radius: 8px 8px 0 0
+
+	// TOP
+	&:before
+		@extend %dis-none
+		@extend %pos-abs
+		width: 100%
+		height: 60px
+		content: ''
+		background: url('../img/PaperTop.png') no-repeat bottom left
+		background-size: 100%
+		top: -60px
+		left: 0
+
+	// BOTTOM
+	&:after
+		@extend %dis-block
+		@extend %pos-abs
+		width: 100%
+		height: 56px
+		content: ''
+		background: url('../img/PaperBottom.png') no-repeat top left
+		background-size: 100%
+		bottom: -56px
+		left: 0
+
+.outer-border
+	@extend %pos-rel
+	@extend %dis-block
+
+	+media-query(lap)
+		padding: 7px
+		border: 10px solid $color-dark-red
+
+	&:before
+		@extend %dis-none
+		@extend %lap--dis-inline-block
+		@extend %pos-abs
+		content: ''
+		height: 96px
+		width: 96px
+		background: #fbfaec url('../img/menu-top-left.png') no-repeat
+		background-size: 100%
+		left: -10px
+		top: -10px
+		z-index: 1
+
+	&:after
+		@extend %dis-none
+		@extend %lap--dis-inline-block
+		@extend %pos-abs
+		content: ''
+		height: 96px
+		width: 96px
+		background: #fbfaec url('../img/menu-top-right.png') no-repeat
+		background-size: 100%
+		right: -10px
+		top: -10px
+		z-index: 1
+
+.inner-border
+	@extend %pos-rel
+	@extend %dis-block
+	@extend %padding-quarter-sides
+	@extend %lap--padding-double-sides
+
+	+media-query(lap)
+		padding-top: 30px
+		padding-bottom: 30px
+		border: 3px solid $color-dark-red
+
+	&:before
+		@extend %dis-none
+		@extend %lap--dis-inline-block
+		@extend %pos-abs
+		content: ''
+		height: 96px
+		width: 96px
+		background: #fbfaec url('../img/menu-bottom-left.png') no-repeat
+		background-size: 100%
+		left: -20px
+		bottom: -20px
+		z-index: 1
+
+	&:after
+		@extend %dis-none
+		@extend %lap--dis-inline-block
+		@extend %pos-abs
+		content: ''
+		height: 96px
+		width: 96px
+		background: #fbfaec url('../img/menu-bottom-right.png') no-repeat
+		background-size: 100%
+		right: -20px
+		bottom: -20px
+		z-index: 1
+
+.menuDisplay
+	@extend %text-center
+	color: $color-red
+	position: relative
+	z-index: 100
+
+	h2,
+	h3,
+	h4,
+	p
+		&::selection
+			background: $color-dark-red
+			color: #fff
+
+	h2
+		@extend %caps
+		@extend %margin-top
+		@extend %margin-half-bottom
+		font-size: $h3-size
+		letter-spacing: 2px
+
+		&:first-child
+			@extend %margin-off-top
+
+	h3
+		@extend %margin-off-bottom
+		text-transform: none
+		font-size: $h2-size
+		letter-spacing: 0px
+
+	h3,
+	h4
+		font-family: $font-abel
+		color: $color-dark-grey
+		line-height: normal
+
+	h4
+		font-size: 16px
+		text-transform: none
+		@extend %margin-half-bottom
+
+span.price
+	@extend %margin-off-bottom
+	text-transform: none
+	font-size: $h2-size
+	letter-spacing: 0px
+	font-family: $font-abel
+	color: $color-dark-grey
+	line-height: normal
+	margin-left: 30px
+
+.drink-table
+	@extend %dis-block
+	@extend %desk--margin-double-sides
+
+.drink-row-head
+	@extend %padding-bottom
+
+.drink-title,
+.drink-price
+	@extend %pos-rel
+	@extend %dis-table-cell
+
+.drink-title
+	@extend %one-whole
+	@extend %text-left
+
+.drink-price
+	.price
+		@extend %dis-block
+		@extend %pos-rel
+		min-width: 30px
+
+.dish
+	+media-query(lap)
+		margin-left: 40px
+
+.dishDescription
+	p
+		margin: 0
+		color: #111 !important
+		font-weight: 400 !important
+
+@media screen and (max-width: 640px)
+	.menuDownload
+		display: none
+
+
+// Featured
+///////////////////////////////////////
+
+
+.menu-wrap
+
+	.disclaimer
+		@extend %dis-block
+		@extend %pos-rel
+		@extend %margin-double-top
+		+font-size(10px)
+		color: #777
+		max-width: 600px
+		margin-right: auto
+		margin-left: auto
+
+	.feature
+		@extend %dis-inline-block
+		@extend %pos-rel
+		@extend %margin-ends
+		@extend %one-whole
+		padding: 2px
+		border: 3px solid $color-dark-red
+		border-radius: 4px
+
+		+media-query(desk)
+			min-width: 500px
+			width: auto
+
+	.feature-container
+		@extend %dis-inline-block
+		@extend %pos-rel
+		@extend %padding-half
+		@extend %lap--padding
+		@extend %one-whole
+		border: 1px solid $color-dark-red
+
+		h2
+			&:before,
+			&:after
+				@extend %pos-rel
+				@extend %dis-inline-block
+				content: ''
+				width: 28px
+				height: 20px
+
+				+media-query(lap)
+					width: 38px
+					height: 30px
+
+			&:before
+				@extend %margin-right
+				background: url('../img/feature-left.jpg') no-repeat
+				background-size: 100%
+
+			&:after
+				@extend %margin-left
+				background: url('../img/feature-right.jpg') no-repeat
+				background-size: 100%

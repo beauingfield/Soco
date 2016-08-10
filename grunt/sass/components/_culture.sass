@@ -1,0 +1,378 @@
+
+// Culture styling
+
+.culturePage
+	padding-bottom: 50px
+	@extend %cf
+
+.title
+
+	img
+		width: 100%
+		height: auto
+
+.cat-filter
+	float: right
+	position: absolute
+	top: 70px
+	right: 20px
+	z-index: 998
+
+	&:hover
+		ul
+			display: block
+			margin-top: 0
+			padding-bottom: 5px
+			background-color: #fff
+			border-radius: 3px
+			border-radius: 0 0 3px 3px
+
+	ul
+		list-style: none
+		position: relative
+		margin: 0
+		padding: 0
+
+ul.cat-dropdown
+	display: none
+
+	li
+		text-align: center
+		line-height: 2.2
+
+		a
+			text-align: center
+
+			&:hover
+				color: $color-red
+
+#update
+	position: relative
+	width: 100%
+	margin-top: 50px
+
+	#post
+		min-height: 330px
+
+	.new-post
+		margin: 0
+		width: 100%
+		margin-bottom: 0
+		min-heigh: 320px
+
+		img
+			width: 100%
+			height: auto
+
+	.date
+		display: block
+		float: right
+		width: 20%
+		height: 40px
+		background-color: #fff
+		color: #7a1125
+		padding-left: 0
+		font-weight: 700
+		position: absolute
+		right: 0
+		top: 0
+		z-index: 997
+		opacity: 0.9
+		text-align: center
+
+		.num
+			display: inline-block
+			font-weight: 700
+			margin-right: 3px
+			font-size: 22px
+
+		.month
+			display: inline-block
+			font-weight: 400
+			text-transform: uppercase
+			font-size: 20px
+
+	.post-title
+		color: #ffffff
+		font-weight: 400
+		padding-left: 0
+		text-align: left
+		font-size: 22px
+		text-transform: none
+		display: inline-block
+		max-width: 400px
+
+	.post-image
+		width: 100%
+		float: right
+
+	.post-content
+		width: 40%
+		float: left
+
+	.image-container
+		top: 0
+		position: relative
+		float: right
+		width: 58%
+		margin-left: 2%
+
+	a
+		color: #c71c3b
+		font-weight: 700
+		font-size: 14px
+		transition: .25s ease-in-out
+		-moz-transition: .25s ease-in-out
+		-webkit-transition: .25s ease-in-out
+
+		&:hover
+			color: #fff
+
+	a img
+		opacity: 1
+		transition: opacity .25s ease-in-out
+		-moz-transition: opacity .25s ease-in-out
+		-webkit-transition: opacity .25s ease-in-out
+
+		&:hover
+			opacity: 0.6
+
+	.cat-container
+		width: 100%
+		height: 40px
+		padding: 10px
+		position: absolute
+		bottom: 30px
+		right: 0
+		background: rgba(0,0,0,0.75)
+
+		.cat-name
+			float: right
+
+			a
+				color: #fff
+
+				&:hover
+					color: $color-red		
+
+hr.culture
+	width: 100%
+	border-color: #333
+	border-width: 1px
+	margin-top: 40px
+	margin-bottom: 40px
+
+.wp-video
+	margin-bottom: 20px
+
+// Single page styling	
+
+.single-post-page
+	margin-top: 0
+
+.single-post-content
+	max-width: 700px
+	margin-right: 20px
+	float: left
+
+.single-post-image
+	max-width: 650px
+	float: left
+	margin-right: 20px
+	display: block
+
+	img
+		margin-bottom: 0
+
+.single-header
+	width: 100%
+	height: auto
+	margin: 0 auto
+	background-color: $color-red
+	padding: 40px 0
+	margin-bottom: 40px
+
+.secondary-nav
+	width: 100%
+	background-color: #222
+	height: 80px
+
+	a.back-to
+		float: left
+		font-size: 14px
+		font-weight: 600
+		display: block
+		padding: 30px 0
+
+		&:hover
+			color: #a6a6a6
+
+	.prev-next
+		float: right
+		font-size: 14px
+		font-weight: 600
+		display: block
+		margin-top: 30px		
+
+h2.single-post-title
+	font-size: 32px
+	margin-bottom: 10px
+
+p.author
+	font-size: 18px
+	font-style: italic
+
+// Sidebar styling
+
+.sidebar
+	float: right
+	text-align: left
+
+h1.widget-title
+	font-size: 22px
+	font-weight: 300
+	margin: 20px 0
+	border-bottom: 1px solid #666
+	padding-bottom: 5px
+
+// Tablet styling
+@media screen and (max-width: 1024px)	
+
+	.read-more-share
+
+		.button-wrap
+
+			.button
+				margin: 0
+
+			&.culture
+				padding-left: 0
+				width: 100px
+	
+// Mobile styling
+@media screen and (max-width: 768px)
+
+	.cultureColumn
+		width: 100%
+		float: none
+
+	#update
+		padding-bottom: 20px
+
+		#post
+			min-height: 0
+
+		.new-post
+			margin-bottom: 0
+			width: auto
+
+		.post-title
+			float: none
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+			max-width: 100%
+
+		.post-image
+			width: 100%
+			float: none
+			margin-left: 0
+
+		.post-content
+			width: 100%
+			float: none
+
+		.date
+			float: none
+			position: relative
+			width: 100%
+			height: 40px
+			text-align: center
+			margin-bottom: 0
+			padding: 0
+			right: 0
+			top: 0
+			z-index: 2
+
+		a
+			font-size: 16px
+			text-align: center
+
+		.image-container
+			top: 0
+			position: relative
+			width: 100%
+
+	.cat-filter
+		top: 10px
+		width: 100%
+		float: none
+		position: relative
+		right: 0
+
+	ul.cat-dropdown
+
+		li
+			line-height: 2
+
+	ul.cat-inline
+		display: inline-block
+		width: 100%
+		height: 20px
+		float: left
+		
+		li
+			display: inline
+			list-style-type: none
+			text-decoration: none
+			float: left
+
+	hr.culture
+		margin-top: 30px
+		margin-bottom: 30px
+
+	// Single page styling
+
+	.single-header
+		padding: 20px 0 10px 0
+
+	.single-post-image
+		width: 100%
+		
+		img
+			margin-bottom: 20px
+
+	.single-post-content
+		width: 100%		
+
+	.read-more-share
+
+		.button-wrap
+
+			.button
+				margin: 0
+
+			&.culture
+				padding-left: 24px
+
+	.icon-facebook, .icon-twitter, .icon-instagram
+		font-size: 20px
+		margin: 0
+
+		a
+			margin: 0 !important
+
+		&:hover
+			opacity: 0.75
+
+	img
+		width: 100%
+		height: auto				
+
+			
+	// Sidebar styling
+
+	.sidebar
+		float: none
+		text-align: center
+		margin-bottom: 20px

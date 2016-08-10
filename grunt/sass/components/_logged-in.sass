@@ -1,0 +1,80 @@
+////////////////////////////////////////////////
+// Logged In Styling
+////////////////////////////////////////////////
+
+.admin-bar
+
+	// Navigation
+	///////////////////////////////////////
+	.site-main,
+	.site-content,
+	.content-area
+		@extend %cf
+
+	.header
+		top: 32px
+	
+	.navigation
+		top: 32px
+
+	.header-logo
+		top: 42px
+
+	// Edit posts
+	///////////////////////////////////////
+
+	.post-edit-link
+		@extend %pos-rel
+		@extend %dis-block
+		@extend %ws
+		@extend %padding-half-sides
+		@extend %padding-quarter-ends
+		@extend %margin-double-right
+		+font-size(12px)
+		min-width: 106px
+		color: #fff
+		background: $color-dark-red
+		border-radius: 4px
+		border: 1px solid transparent
+		text-transform: none
+
+		&:hover
+			background: transparent
+			color: $color-dark-red !important
+			border: 1px solid $color-dark-red
+
+		&:before
+			@extend %dis-inline-block
+			@extend %pos-rel
+			width: 20px
+			height: 20px
+			line-height: 1
+			font-size: 15px
+			bottom: -2px
+			right: 3px
+			font-family: dashicons
+			content: '\f464'
+
+	.menu-wrap
+
+		.edit-wrap
+			@extend %pos-rel
+			@extend %dis-table
+
+		.edit-link,
+		.edit-content
+			@extend %pos-rel
+			@extend %dis-table-cell
+
+		.edit-content
+			@extend %one-whole
+
+		.drink-edit
+			@extend %pos-rel
+			@extend %dis-table-cell
+
+		.dish
+			@extend %text-left
+
+		.dishDescription
+			@extend %text-left

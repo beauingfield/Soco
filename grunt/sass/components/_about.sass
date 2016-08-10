@@ -1,0 +1,60 @@
+.aboutPage
+	background-image: url('../img/about-bg.jpg')
+	background-position: top center
+	background-attachment: fixed
+	background-repeat: no-repeat
+	background-size: cover
+	padding-bottom: 50px
+
+	blockquote
+		width: 75%
+
+	.aboutImg
+		padding-left: 40px
+
+		img
+			width: 100%
+			height: auto
+
+
+.bullets
+	li
+		list-style-type: disc
+		@extend %margin-left
+
+.cityfish-wrap
+	@extend %cf
+
+.cityfish-logo
+	@extend %fl
+	@extend %pos-rel
+	@extend %dis-inline-block
+	@extend %one-whole
+	@extend %lap--one-half
+	@extend %padding-half-top
+
+.cityfish-info
+	@extend %fl
+	@extend %text-center
+	@extend %pos-rel
+	@extend %dis-inline-block
+	@extend %one-whole
+	@extend %lap--one-half
+
+	+media-query(lap)
+		text-align: left
+
+// Tablet styling
+@media screen and (max-width: 1024px)
+
+// Mobile styling
+@media screen and (max-width: 768px)
+	.aboutPage
+		blockquote
+			width: 100%
+
+		.one-half
+			width: 100%
+
+		.column
+			padding: 0

@@ -1,0 +1,329 @@
+// News & Events styling
+
+.newsPage
+	background-image: url('../img/FunStuffBackground.jpg')
+	background-position: top center
+	background-attachment: fixed
+	background-repeat: no-repeat
+	background-size: cover
+	padding-bottom: 50px
+
+	h2
+		margin-bottom: 10px
+.event
+	margin-bottom: 20px
+	position: relative
+
+.eventDetails
+	width: 60%
+
+.eventDate
+	width: 25%
+	background-color: rgba(255, 255, 255, 0.9)
+	text-align: center
+	vertical-align: middle
+
+h4.date
+	font-size: 33px
+	letter-spacing: 1px
+	font-weight: $weight-bold
+	color: $color-dark-red
+	margin: 0
+	float: none
+
+	span
+		display: block
+		font-size: 80px
+		margin-bottom: 5px
+
+.eventImage
+	margin: 0
+	
+	img
+		margin: 0
+
+.eventDescription
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	width: 40.5%
+	background-color: $color-dark-red
+	padding: 20px
+	vertical-align: top
+
+	h3
+		font-size: 22px
+		line-height: normal
+		margin-bottom: 10px
+		text-align: center
+		font-weight: $weight-normal
+		letter-spacing: 1px
+
+	p
+		font-size: 14px
+		max-height: 40%
+		overflow: hidden
+
+	.button
+		position: absolute
+		width: 184px
+		bottom: 20px
+		left: 50%
+		margin-left: -92px
+
+		&.mobile
+			@extend %dis-block
+			@extend %lap--dis-none
+	
+.readMore
+	background-color: $color-dark-red
+	position: fixed
+	top: -65px
+	left: 0
+	bottom: 0
+	width: 100%
+	z-index: 9999
+	padding-top: 125px
+	display: none
+	overflow-y: scroll
+
+	&.active
+		display: block
+
+	.icon-exit
+		display: block
+		margin-top: -60px
+		padding: 20px
+		float: right
+		+transition(all 0.2s)
+
+		&:hover
+			color: $color-red
+			background-color: white
+
+	h3, h4
+		margin-bottom: 10px
+
+	h3
+		font-size: 28px
+		font-weight: $weight-normal
+
+	h4
+		font-size: 20px
+
+		&.date
+			font-size: 33px
+
+	.readMoreInfo
+		background-color: rgba(255, 255, 255, 0.9)
+		color: $color-red
+		padding: 10px
+
+		p
+			color: $color-red
+			margin-bottom: 0
+
+		img
+			margin: 0
+	
+	.readMoreDate, .readMoreWhen, .readMoreWhere, .readMoreWhat
+		display: table-cell
+		padding: 10px 10px 0
+		vertical-align: top
+	
+	.readMoreWhen, .readMoreWhere
+		font-family: $font-oswald
+		font-weight: $weight-normal
+		
+		p
+			font-size: 18px
+
+		span
+			display: block
+
+	.readMoreDate
+		width: 5%
+
+	.readMoreWhen
+		width: 15%
+
+	.readMoreWhere
+		width: 20%
+
+		a
+			font-size: 18px
+
+	.readMoreWhat
+		width: 50%
+
+		a
+			color: $color-red
+			font-weight: 600
+
+			&:hover
+				color: #333
+
+.readMoreMobile
+	@extend %dis-none
+
+	+media-query(lap)
+		display: none !important
+
+.eventDate, .eventImage
+	display: table-cell
+
+.listEntry
+	@extend %margin-bottom
+	position: relative
+
+	h3
+		font-size: 18px
+		font-weight: $weight-normal
+		letter-spacing: 0.5px
+		margin-bottom: 0
+		line-height: normal
+
+	p
+		font-size: 14px
+		margin-bottom: 10px
+		color: white
+
+		span
+			font-weight: $weight-bold
+			font-style: italic
+	
+	h3, p
+		width: 80%
+
+	.button
+		margin: 0
+		position: absolute
+		right: 0
+		bottom: 5px
+	
+.nextPage.chef img
+	max-width: 300px
+
+@media screen and (max-width: 768px)
+	.eventDetails
+		width: 100%
+
+	.eventDate
+		width: 25%
+
+	.eventImage
+		width: 75%
+
+	.eventDescription
+		display: block
+		position: relative
+		width: 100%
+
+		.button
+			width: 100%
+			position: relative
+			left: auto
+			top: auto
+			right: auto
+			bottom: auto
+			margin-left: 0
+	
+	.readMoreMobile
+		margin-bottom: 20px
+
+		p
+			margin-bottom: 10px
+		a
+			text-decoration: underline
+
+		a.button
+			margin-top: 30px
+			text-decoration: none
+
+	.listEntry
+		h3
+			font-size: 18px
+			margin-bottom: 8px
+
+		p
+			font-size: 14px
+
+		h3, p
+			width: 100%
+
+		.button
+			position: relative
+			display: block
+			width: 100%
+			margin: 20px 0 30px
+	
+	.nextPage.chef img
+		max-width: 60%	
+
+@media screen and (max-width: 640px)
+	.eventDate
+		h4
+			font-size: 18px
+
+			span
+				font-size: 42px
+
+	.read-more-share
+
+		.button-wrap
+			width: 100% !important
+
+// Share Buttons
+///////////////////////////////////////
+
+.event-desc
+	@extend %margin-bottom
+	@extend %lap--margin-off-bottom
+
+.button-outter-wrap
+	@extend %dis-none
+	@extend %padding
+	@extend %lap--padding-off
+	background: #94152c
+	+border-radius(3px)
+
+	+media-query(desk)
+		background: transprent
+
+	&.mobile
+		@extend %dis-none
+		@extend %lap--dis-none
+
+.read-more-share
+	//@extend %grid
+	margin-left: -24px !important
+
+	+media-query(mobile)
+		margin-left: 0 !important
+
+	.button-wrap
+		@extend %dis-block
+		@extend %desk--dis-inline-block
+		@extend %grid-item
+		@extend %padding-off-left
+		@extend %lap--padding-left
+		@extend %fl
+
+		+media-query(desk)
+			width: 165px !important
+
+			&.culture
+				width: 80px !important
+				padding-left: 0
+
+		.button
+			@extend %dis-inline-block
+			@extend %margin-off-sides
+			@extend %margin-bottom
+			@extend %margin-off-top
+
+			&.email
+				@extend %margin-off-bottom
+				width: 100%
+

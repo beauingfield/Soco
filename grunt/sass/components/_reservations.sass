@@ -1,0 +1,158 @@
+// Reservation styling
+
+.reservationsPage
+	min-height: 900px
+	background-image: url('../img/ReservationBackground.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-attachment: fixed
+	background-position: center
+	padding-bottom: 70px
+	overflow: hidden
+	position: relative
+
+.grid
+	@extend %grid
+
+.select
+	&.icon-arrowDown
+		&:before
+			right: 0
+			top: 0
+			height: 100%
+			border-radius: 0 4px 4px 0
+			line-height: 2
+
+.reservation
+	@extend %dis-block
+	margin: 0 0 35px
+
+	label
+		@extend %dis-block
+
+		&.inlineLabel
+			margin: 0 20px 0 10px
+			@extend %dis-inline-block
+
+	select
+		@extend %one-whole
+		@extend %dis-block
+		@extend %pos-rel
+		color: $color-dark-grey
+		border: 1px solid #fff
+
+	select::-ms-expand
+		display: none
+
+	input[type="submit"]
+		width: 120px
+		height: 35px
+		@extend %dis-inline-block
+		margin: 0
+		vertical-align: bottom
+
+	&.special
+		@extend %one-whole
+		@extend %lap--one-half
+		@extend %grid-item
+
+		.button.solid
+			margin: 0
+			max-width: 200px
+
+		input[type="email"],
+		input[type="text"],
+		textarea
+			background: rgba(255, 255, 255, .8) !important
+			border: 1px solid #999
+			color: #222
+
+		input,
+		textarea
+			margin-top: 0 !important
+			margin-bottom: 15px
+
+		input[type="submit"]
+			@extend %one-whole
+
+.special-contact
+	@extend %one-whole
+	@extend %lap--one-half
+	@extend %grid-item
+
+.reservationParagraph
+	text-shadow: 0px 2px 2px #222222
+	font-size: 18px
+
+label.fl, .select
+	margin-right: 8px
+
+.inlineDivider:after
+	display: block
+	content: " "
+	width: 1px
+	height: 100%
+	background-color: white
+
+.reservationDate,
+.reservationTime,
+.partySize
+	@extend %cf
+	@extend %dis-inline-block
+	vertical-align: bottom
+
+.reservationDate
+	label
+		margin-bottom: 0
+
+.partySize
+	label
+		margin-bottom: 20px
+
+.phone, .phone a, .phone p
+	@extend %dis-block
+	font-family: $font-oswald
+	color: white
+
+.phone a
+	font-size: 40px
+
+.reservationTime
+	.select
+		width: 100%
+		position: relative
+		display: inline-block
+
+		+media-query(lap)
+			width: auto
+			margin-top: 20px
+			margin-left: 10px
+
+@media screen and (max-width: 1024px)
+
+@media screen and (max-width: 768px)
+	.reservationDate, .reservationTime, .partySize
+		display: block
+		float: none
+
+		:first-child
+			margin: 0
+
+	.reservation
+		input[type="submit"]
+			margin: 20px 0 0 0
+			width: 100%
+
+		select
+			height: 45px
+
+		div.select
+			display: block
+			margin-right: 0
+
+		.reservationTime
+			margin-top: 20px
+			margin-bottom: 20px
+
+		label.inlineLabel
+			margin: 0 0 15px 0

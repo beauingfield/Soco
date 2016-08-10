@@ -1,0 +1,160 @@
+<?php
+
+/*
+ * Template Name: Soco Reservations Page
+ *
+ */
+
+get_header();
+
+	$phone = get_option('soco_phone');
+?>
+	<div class="reservationsPage">
+		<img src="<?php bloginfo('template_directory'); ?>/_assets/img/ReservationBackground.jpg" alt="Reservations" class="bg-ie" />
+		<div class="container">
+			<h1>Reservations<span class="icon-logoFlourish"></span></h1>
+			<ul class="optionSelect">
+				<li><a class="tab active" href="#Main">Make A Reservation</a></li>
+				<li><a class="tab" data-tab="group" href="#Room">Group Dining</a></li>
+				<!-- <li><a class="tab" href="#Special">Special Events</a></li> -->
+			</ul>
+
+
+			<?php /*  ?><div id="OT_searchWrapperAll">
+				<script type="text/javascript" src="https://secure.opentable.com/ism/default.aspx?rid=150973&restref=150973&mode=horiz-transparent-white&hover=1"></script>
+				<noscript id="OT_noscript"><a href="http://www.opentable.com/single.aspx?rid=150973&rtype=ism&restref=150973" >Reserve Now On OpenTable.com</a></noscript>
+				<div id="OT_logoLink">
+					<a href="http://www.opentable.com/single.aspx?rid=150973&rtype=ism&restref=150973" >Soco (150973), Orlando / Central Florida East Reservations</a>
+				</div>
+				<div id="OT_logo">
+					<a href="https://secure.opentable.com/home.aspx?restref=150973&rtype=ism" title="Powered By OpenTable">
+						<img src="https://secure.opentable.com/img/buttons/Otlogo.gif" id="OT_imglogo" alt="Restaurant Management Software" />
+					</a>
+				</div>
+			</div>
+			<?php */ ?>
+			<div id="Main" class="tabDisplay active">
+				<form class="reservation" role="form" method="post" action="https://secure.opentable.com/ism/interim.aspx" name="form" target="_blank">
+					<input type="hidden" class="OT_hidden" name="RestaurantID" value="150973">
+					<input type="hidden" class="OT_hidden" name="GeoID" value="0">
+					<input type="hidden" class="OT_hidden" name="wt" value="1">
+					<input type="hidden" class="OT_hidden" name="txtHidServerTime" value="10/14/2014 8:47:20 AM">
+					<input type="hidden" class="OT_hidden" name="txtDateFormat" value="MM/dd/yyyy">
+					<div class="reservationDate">
+						<label for="formDate">Preferred Date &amp; Time</label>
+
+						<div class="select">
+							<input type="text" id="ReservationDate" name="startDate" value=""/>
+
+							<script type="text/javascript">
+
+								jQuery(document).ready(function() {
+									jQuery('#ReservationDate').datepicker({
+										dateFormat : 'mm/dd/yy'
+									});
+
+									var newDate = new Date();
+									var prePopulatedDate = ('0' + (newDate.getMonth() + 1)).slice(-2) + "/" + ('0'+newDate.getDate()).slice(-2) + '/' + newDate.getFullYear();
+									$('#ReservationDate').val(prePopulatedDate);
+								});
+
+
+							</script>
+						</div><!-- .select -->
+
+						<div class="reservationTime">
+							<label class="inlineLabel" for="formTimeHour">at</label>
+
+							<div class="select icon-arrowDown">
+								<select name="ResTime" class="feedFormField">
+
+									<option value="11:00 AM">11:00 AM</option>
+									<option value="11:30 AM">11:30 AM</option>
+									<option value="12:00 PM">12:00 PM</option>
+									<option value="12:30 PM">12:30 PM</option>
+									<option value="1:00 PM">1:00 PM</option>
+									<option value="1:30 PM">1:30 PM</option>
+									<option value="2:00 PM">2:00 PM</option>
+									<option value="2:30 PM">2:30 PM</option>
+
+									<option value="5:00 PM">5:00 PM</option>
+									<option value="5:30 PM">5:30 PM</option>
+									<option value="6:00 PM">6:00 PM</option>
+									<option value="6:30 PM">6:30 PM</option>
+									<option value="7:00 PM" selected="">7:00 PM</option>
+									<option value="7:30 PM">7:30 PM</option>
+									<option value="8:00 PM">8:00 PM</option>
+									<option value="8:30 PM">8:30 PM</option>
+									<option value="9:00 PM">9:00 PM</option>
+									<option value="9:30 PM">9:30 PM</option>
+									<option value="10:00 PM">10:00 PM</option>
+								</select>
+							</div><!-- .select -->
+						</div><!-- .reservationTime -->
+
+					</div><!-- .reservationDate -->
+
+					<div class="buttonDivider"></div>
+
+					<div class="partySize">
+						<label for="formSize">Party Size</label>
+
+						<div class="select icon-arrowDown">
+							<select name="PartySize" class="feedFormField">
+								<option value="1">1</option>
+								<option value="2" selected="">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div><!-- .select -->
+					</div><!-- .partySize -->
+
+					<input type="submit" name="submit" value="Submit">
+
+				</form>
+				<div class="column two-thirds">
+					<p class="reservationParagraph">Although we provide the Open Table reservation system for your convenience, it is always our pleasure to speak with your directly. Give us a call at <a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a>. For parties of 6 or more, please call the restaurant.</p>
+				</div>
+
+				<!-- <div class="column two-thirds">
+					<p class="phone">Give us a call</p>
+				</div> -->
+			</div><!-- #Main.tabDisplay -->
+
+			<div id="Room" class="tabDisplay">
+				<div class="grid">
+					<div class="reservation special">
+						<label>Contact Us with Your Request</label>
+						<p>True southern hospitality is in the details, and we handle them all for you. Our semi-private dining room accommodates up to 30 guests and is the perfect location for your cocktail party or sit-down dinner. Our dedicated team strives to serve up the best in quality and service for you and your guests.</p>
+						<p><a href="<?php bloginfo('template_directory'); ?>/_assets/pdf/group.pdf" class="button solid">Group Dining Package</a></p>
+					</div>
+					<div class="special-contact">
+						<div class="thankyou-message">
+							<p class="phone">Email us at</p>
+							<p><a href="mailto:shannon@thorntonparkrg.com">shannon@thorntonparkrg.com</a></p>
+							<p class="phone">Or give us a call<a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a></p>
+						</div>
+					</div>
+				</div>
+			</div><!-- #Room.tabDisplay -->
+
+		</div><!-- .container -->
+	</div><!-- .reservationsPage -->
+
+	<a href="/press-events/">
+		<div class="nextPage news">
+			<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextEvents.jpg" alt="Press and Events" class="bg-ie" />
+			<div class="container">
+				<span class="icon-arrowDown"></span>
+				<h3>Press &amp; Events</h3>
+				<img src="<?php bloginfo('template_directory' ); ?>/_assets/img/Type-Events.png">
+			</div><!-- .container -->
+			<div class="overlay"></div>
+		</div><!-- .nextPage -->
+	</a>
+<?php
+
+get_footer();
+
+?>

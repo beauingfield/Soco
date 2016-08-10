@@ -1,0 +1,287 @@
+// Header Styling
+header
+	z-index: 900
+
+.icon-menu,
+.icon-phone,
+.icon-exit
+	color: white
+	@extend %pos-rel
+	font-size: 28px
+	padding: 11px
+	display: none
+
+.mobile-menu
+	float: right
+
+.phone-menu
+	float: left
+
+.icon-menu
+	float: right	
+
+.icon-exit
+	font-size: 24px
+	padding: 13px
+
+.container-logo
+	width: 100%
+	margin: 0 auto
+	max-width: 1040px
+	overflow: hidden
+	position: relative
+	padding: 0 20px
+	position: relative
+	top: 13px
+	left: 0
+
+.header-logo
+	@extend %pos-rel
+	@extend %dis-inline
+	@extend %fl
+	top: 10px
+	display: block
+	position: fixed
+	z-index: 9991
+
+	.logoMobile
+		visibility: hidden
+
+header
+	.logo
+		width: 65px
+	
+	.logoText
+		width: 100%
+		margin-left: 5px
+		vertical-align: top
+
+header,
+.navigation
+	background-color: $color-dark-grey
+	height: 64px
+	@extend %pos-fixed
+	top: 0
+	width: 100%
+
+.navigation,
+.contactInfo
+	+transition(all 0.5s)
+	z-index: 1000
+	width: 100%
+
+.navigation
+	font-family: $font-oswald
+	overflow: hidden
+	margin: 0 auto
+	padding: 20px 0
+	background-color: #111
+	position: fixed
+
+	.container
+		overflow: visible
+
+	ul
+		text-align: right
+
+		li
+			@extend %dis-inline-block
+			font-size: 16px
+			padding-left: 36px
+			@extend %text-center
+
+			&:first-child
+				padding: 0
+			&:active a
+				+opacity(1.0)
+
+				&:after
+					bottom: -21px
+					+opacity(100)
+			&:hover,
+			&.current_page_item
+				a
+					+opacity(1)
+				+media-query(desk)
+					a
+						+opacity(1.0)
+
+						&:after
+							bottom: -21px
+							+opacity(100)
+
+			a
+				color: white
+				letter-spacing: 1px
+				position: relative
+				+opacity(0.5)
+				display: block
+
+				&:after
+					display: block
+					position: absolute
+					content: " "
+					width: 100%
+					height: 3px
+					background-color: $color-red
+					bottom: -24px
+					+transition(all .2s)
+					+opacity(0)
+
+.contactInfo
+	display: none
+
+.headerHome
+	.header-logo
+		display: none
+
+.navigation.headerHome ul
+	text-align: center
+
+.logoMobile
+	@extend %desk--dis-none
+	width: 66px
+	height: 66px
+
+.contact-map
+	@extend %dis-block
+	@extend %pos-rel
+	width: 100%
+	height: auto
+
+// Tablet styling
+@media screen and (max-width: 1024px)
+
+@media screen and (max-width: 961px)
+	header,
+	.navigation
+		height: auto
+
+	header
+		.container
+			padding: 0
+			overflow: visible
+
+	.icon-menu,
+	.icon-phone,
+	.icon-exit
+		display: inline-block
+
+	.icon-facebook, .icon-twitter, .icon-instagram
+		font-size: 24px
+		display: inline
+		margin: 0 20px 0 0	
+
+	.header-logo
+		position: absolute
+		left: 50%
+		margin: 15px 0 0 -32px
+
+		img
+			display: block
+
+	.logoMobile
+		visibility: visible
+		position: absolute
+		top: 10px
+		left: 50%
+		z-index: 9999
+		margin-left: -33px
+
+	header .logoText
+		display: none
+
+	.navigation,
+	.contactInfo
+		position: fixed
+		display: block
+		padding: 0
+
+	.contactInfo
+		background-color: rgba(34, 34, 34, 1)
+		+transform(translateX(-100%))
+		height: 100%
+		top: 0
+		z-index: 1000
+
+		&.active
+			+transform(translateX(0))
+			overflow: scroll
+
+		.icon-exit
+			float: left
+
+		.icon-phone
+			float: right
+
+	.contactInfo .locationInfo
+		padding: 30px 20px
+		background-color: transparent
+
+	.contactInfo .mapAddress
+		margin-top: 0
+		padding: 20px 20px
+		background-color: #1d1d1d
+
+		p
+			margin: 0
+
+			a
+				display: block
+
+	.navigation
+		background-color: rgba(122, 17, 37, 1)
+		+transform(translateX(100%))
+		width: 100%
+		height: 100%
+
+		ul
+			margin-top: 50px
+
+			li
+				padding: 0
+				display: block
+				text-align: center
+
+				a
+					display: block
+					padding: 8px 0
+					font-size: 24px
+					font-weight: $weight-light
+
+					&:hover:after
+						+opacity(.6)
+						bottom: 0
+
+					&:after
+						display: block
+						position: absolute
+						content: " "
+						width: 50px
+						height: 1px
+						background-color: #fff
+						bottom: 0
+						+transition(all .2s)
+						+opacity(.5)
+						left: 50%
+						margin-left: -25px
+
+				&:last-child
+					a:after
+						display: none
+
+		&.active
+			+transform(translateX(0))
+
+		.icon-exit
+			float: right
+
+		.icon-menu
+			float: left
+
+	#contact_map
+		width: 100%
+		height: 255px
+		background-color: $color-dark-grey
+		float: left
+		border-radius: 0 0 3px 3px

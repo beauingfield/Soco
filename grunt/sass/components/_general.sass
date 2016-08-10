@@ -1,0 +1,648 @@
+
+// General styling
+
+html
+	height: 100%
+
+.bg-ie
+	@extend %dis-none
+
+.skip-link
+	width: 1px!important
+	height: 1px!important
+	padding: 0!important
+	margin: -1px!important
+	position: absolute!important
+	overflow: hidden!important
+	border: 0!important
+	clip: rect(0 0 0 0)!important
+
+body
+	background-color: black
+	min-height: 100%
+	color: white
+	margin: 0 !important
+	@extend %cf
+	+transition(padding .1s ease-in-out)
+	+media-query(desk)
+		padding-bottom: 152px
+
+		// &.footer
+		// 	padding-bottom: 63px
+
+.site-content
+	margin-top: 50px !important
+
+	+media-query(lap)
+		margin-top: 64px !important
+
+.grid-item
+	@extend %grid-item
+
+h1, h2, h3, h4, h5, h6, cite
+	font-family: $font-oswald
+	text-transform: uppercase
+
+h2, h4, h5, h6, blockquote, .button, input[type="submit"]
+	font-weight: $weight-light
+
+h1
+	font-size: $h1-size
+	font-weight: $weight-normal
+	margin: 60px 0 30px
+	letter-spacing: 2px
+	position: relative
+
+h2
+	font-size: $h2-size
+	margin-bottom: $h2-size
+	letter-spacing: 0.5px
+
+h3
+	font-size: $h3-size
+	font-weight: 100
+	letter-spacing: 2px
+
+h4
+	font-size: $h4-size
+	line-height: 1.4
+
+	&.error
+		margin-left: 60px
+
+h5
+	font-size: $h5-size
+
+h6
+	font-size: $h6-size
+
+blockquote
+	font-size: 22px
+	font-family: $font-oswald
+	font-style: italic
+	letter-spacing: 0.5px
+	margin-bottom: 0
+	line-height: normal
+	max-width: 660px
+
+cite
+	display: block
+	font-size: 18px
+	font-style: normal
+	margin-top: 10px
+
+	span
+		font-size: 24px
+		font-weight: $weight-normal
+		margin-right: 10px
+
+p
+	font-size: 14px
+	color: $color-body-grey
+
+	&.error
+		margin-left: 100px
+
+::-moz-selection
+	color: #222222
+	background: #ffffff
+
+::selection
+	color: #222222
+	background: #ffffff
+
+.fl
+	@extend %fl
+
+.clearfix
+	@extend %cf
+
+.container
+	width: 100%
+	margin: 0 auto
+	max-width: 1040px
+	overflow: hidden
+	position: relative
+	padding: 0 20px
+
+a, input, textarea, div.select
+	text-decoration: none
+	color: white
+	+transition(all 0.2s)
+
+a.hoverLink:hover
+	+opacity(0.75)
+a.redLink
+	color: $color-red
+
+	&:hover
+		color: $color-light-red
+
+ul
+	margin: 0
+li a
+	font-family: $font-oswald
+	color: $color-light-grey
+	letter-spacing: 1px
+
+	&:hover, &.active
+		color: white
+
+img
+	margin-bottom: 30px
+
+.divider
+	display: block
+	height: 15px
+	width: 100%
+	background-image: url('../img/Divider.png')
+	background-position: center
+	margin: 30px 0 30px
+	@extend %cf
+
+.buttonDivider
+	display: inline-block
+	margin: 0 20px 0 10px
+	width: 1px
+	background: #fff
+	height: 35px
+	position: relative
+	top: 7px
+
+.button-wrap
+	width: 30.5%
+	float: left
+	margin-right: 10px
+	font-family: "Oswald",sans-serif
+
+	.button
+		width: 100%
+
+.nextPage
+	height: 300px
+	padding: 20px 0
+	text-align: center
+	background-color: $color-grey
+	color: white
+	position: relative
+
+	h3,
+	img
+		position: relative
+		z-index: 100
+		font-weight: $weight-normal
+
+	h3
+		font-size: 28px
+		line-height: normal
+
+	img
+		width: 100%
+		max-width: 400px
+		margin-top: 20px
+		+opacity(0)
+
+		&.bg-ie
+			min-height: 100%
+			min-width: 1024px
+			max-width: 100% !important
+			width: 100%
+			height: auto
+			position: absolute
+			top: 0
+			left: 0
+			margin-top: 0
+			+opacity(1)
+			z-index: 2
+
+	&:hover
+		.overlay
+			+opacity(.5)
+
+		img
+			+opacity(1)
+			margin-top: 0px
+
+		h3
+			+opacity(0)
+
+		.container
+			padding-top: 0
+
+	&.chef,
+	&.menu,
+	&.location,
+	&.reservations,
+	&.news,
+	&.culture
+		background-position: center
+		background-size: cover
+
+	&.chef
+		background-image: url('../img/NextChef.jpg')
+
+	&.menu
+		background-image: url('../img/NextAbout.jpg')
+
+	&.location
+		background-image: url('../img/NextLocation.jpg')
+
+	&.reservations
+		background-image: url('../img/NextReserved.jpg')
+
+	&.news
+		background-image: url('../img/NextEvents.jpg')
+
+	&.culture
+		background-image: url('../img/NextCulture.jpg')
+
+.nextPage .icon-arrowDown
+	color: white
+	font-size: 28px
+	position: relative
+	z-index: 100
+
+.overlay
+	position: absolute
+	top: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-color: #000
+	+opacity(.7)
+	z-index: 3
+
+.overlay,
+.nextPage img,
+.nextPage h3,
+.nextPage span
+	+transition(all .75s)
+
+.content
+	@extend %cf
+
+.column
+	@extend %fl
+	padding-left: 40px
+
+	@media screen and (max-width: 768px)
+		float: none
+
+	&:first-child
+		padding-left: 0
+
+.one-whole
+	@extend %one-whole
+
+.one-half
+	@extend %one-half
+	padding-left: 0
+
+.one-third
+	@extend %one-third
+
+.one-fourth
+	@extend %one-fourth
+
+.two-thirds
+	@extend %two-thirds
+	padding-left: 0
+
+.one-fifth
+	@extend %one-fifth
+
+.two-fifths
+	@extend %two-fifths
+
+.three-fifths
+	@extend %three-fifths
+
+.four-fifths
+	@extend %four-fifths
+
+.three-fourths
+	@extend %three-fourths
+
+.optionSelect
+	margin-bottom: 20px
+	@extend %cf
+	position: relative
+	z-index: 200
+
+	li
+		display: inline-block
+		margin-left: 20px
+		font-size: 18px
+		font-weight: $weight-light
+
+		&:first-child
+			margin-left: 0
+
+.tabDisplay
+	display: none
+
+	&.active
+		display: block
+
+.button
+	width: auto
+	margin: 0 auto
+	padding: 4px 0
+	display: block
+	border: 1px solid white
+	text-align: center
+	font-family: $font-oswald
+	font-size: 16px
+	border-radius: 3px
+
+	&.little
+		width: 130px
+
+		&.cat
+			font-weight: 300 !important
+			float: left
+
+	&:hover
+		color: $color-red
+		background-color: white
+
+	&.solid
+		background-color: white
+		color: $color-red
+
+		&.cats
+			padding: 10px 25px
+			border-radius: 3px 3px 0 0
+
+		&:hover
+			background-color: transparent
+			color: white
+
+.buttonBlack
+	background-color: $color-dark-grey
+	border: none
+
+label
+	font-size: 16px
+	font-family: $font-oswald
+	font-weight: $weight-normal
+	margin-bottom: 15px
+	letter-spacing: 1px
+
+select
+	height: 35px
+	width: 100%
+	border: none
+	border-radius: 3px
+	padding: 0 35px 0 10px
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	background-color: white
+
+	&:focus
+		outline: none
+
+	&:hover
+		cursor: pointer
+
+div.select
+	width: auto
+	@extend %dis-inline-block
+	position: relative
+	+opacity(0.9)
+
+
+	&:before
+		color: $color-red
+		position: absolute
+		z-index: 10
+		right: 2px
+		top: 10px
+		background-color: white
+		padding-right: 8px
+		pointer-events: none
+
+	&:hover
+		+opacity(1.0)
+		cursor: pointer
+		pointer: cursor
+
+input, textarea
+	width: 100%
+	margin-top: 10px
+	background-color: $color-red
+	border: 1px solid $color-red
+	padding: 0 10px
+	border-radius: 3px
+	color: $color-white
+	font-size: 14px
+
+	&:focus
+		outline: none
+		border-color: white
+
+.icon-logoFlourish
+	font-size: 35px
+	bottom: 10px
+	position: absolute
+	margin-left: 5px
+
+input
+	height: 36px
+
+textarea
+	padding: 10px
+
+input[type="submit"]
+	background-color: white
+	border: 1px solid white
+	color: $color-red
+	font-family: $font-oswald
+	margin-top: 10px
+	font-size: 16px
+
+	&:hover,
+	&:focus
+		background-color: transparent
+		color: white
+			outline: none
+
+.pagination
+	clear: both
+	position: relative
+	margin: 0 auto
+	width: 100%
+	text-align: center
+	float: none
+
+	.current
+		padding: 5px 10px
+		color: $color-red
+		background-color: #fff
+
+	span, a
+		display: inline-block
+		margin: 2px 2px 2px 0
+		padding: 5px 10px
+		text-decoration: none
+		width: auto
+
+	a
+		color: #fff
+		background-color: $color-red
+
+		&:hover
+			color: $color-red
+			background-color: #fff
+
+.errorPage
+	background: url("../../_assets/img/Plate-faded.jpg") no-repeat
+	background-position: fixed
+	left: 0
+	top: 0
+	background-repeat: no-repeat
+	height: 1000px
+	width: 100%
+	margin-top: 60px
+
+.errorContent
+	max-width: 570px
+	position: fixed
+	top: 100px
+	left: 615px
+
+.errorButtons
+	margin-left: 60px
+	width: 250px
+
+.or
+	margin: 10px 0 10px 60px
+	text-align: left
+
+
+// Tablet styling
+@media screen and (max-width: 1024px)
+	body
+		margin-top: 50px
+
+	.nextPage img
+		+opacity(1)
+		margin-top: 0
+		
+
+// Mobile styling
+@media screen and (max-width: 768px)
+	body
+		margin-bottom: 0
+
+	h1
+		font-size: 32px
+		margin-top: 60px
+
+	.icon-logoFlourish
+		font-size: 30px
+		bottom: 5px
+		position: absolute
+		margin-left: 5px
+
+	h2
+		font-size: 22px
+
+	h3
+		font-size: 18px
+		text-align: center
+
+	blockquote
+		font-size: 24px
+		letter-spacing: 0.25px
+
+		cite
+			font-size: 18px
+			text-align: left
+			letter-spacing: 0.5px
+
+			span
+				font-size: 24px
+				display: block
+
+	p
+		font-size: 16px
+
+	.button-wrap
+		width: 100%
+		float: none
+		margin-bottom: 20px
+		
+
+	.container
+		width: 100%
+		padding: 0 20px
+
+		&.transBackground
+			background-color: black
+	.column
+		padding-left: 0
+		width: 100%
+
+	.two-fifths,
+	.three-fifths
+		width: 100%
+
+	.optionSelect li
+		font-size: 20px
+		display: block
+		margin-left: 0
+		margin-bottom: 5px
+
+	div.select, .fl
+		float: none
+
+	input
+		height: 45px
+
+	input, textarea, input[type="submit"]
+		margin-top: 15px
+
+	input[type="submit"]
+		font-size: 22px
+		margin-top: 15px
+		margin-bottom: 40px
+
+	.button
+		font-size: 20px
+
+		&.little
+			width: 90%
+
+			&.cat
+				float: none
+				text-align: center
+				margin: 0 auto
+
+		&:hover
+			color: white
+			background-color: transparent
+
+		&.solid:hover
+			color: $color-red
+			background-color: white
+
+	.desktop
+		display: none
+
+	.mobile
+		display: block
+
+	.buttonBlack
+		&:hover
+			background-color: $color-dark-grey
+
+	.buttonDivider
+		display: none
+
+	.nextPage
+		h3
+			font-size: 22px
+
+		height: 250px

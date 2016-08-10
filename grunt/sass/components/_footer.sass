@@ -1,0 +1,316 @@
+// Footer styling
+
+footer
+	width: 100%
+	background-color: $color-dark-grey
+	@extend %cf
+	position: fixed
+	bottom: 0
+	z-index: 1000
+
+	.footer-container
+		+transition(height .1s ease-in-out)
+		overflow: hidden
+
+		+media-query(desk)
+			height: 73px
+
+			// &.relative
+			// 	height: 120px
+
+		.copy
+			@extend %padding-top
+			@extend %desk--padding-off-top
+			@extend %dis-block
+			@extend %text-center
+			font-size: 12px
+
+	.footer-social
+		text-align: left
+		width: 50%
+		font-family: $font-oswald !important
+		font-size: 14px !important
+		font-weight: 400 !important
+
+		a
+			font-family: $font-oswald !important
+			font-size: 14px !important
+
+			&:hover
+				opacity: 0.75
+
+	.footerInfo
+		@extend %pos-rel
+		position: relative
+		padding: 15px 0
+		background-color: $color-dark-grey
+		z-index: 100
+
+		.container
+			@extend %text-center
+
+	.subscribe
+		background-color: $color-red
+		padding: 11px 0
+		height: 80px
+		width: 100%
+		z-index: 50
+		position: absolute
+		top: 80px
+		+transition(all 0.5s)
+
+		&.active
+			top: 0
+
+		label
+			display: block
+			width: 330px
+			margin-right: 20px
+
+		input[type="email"]
+			background-color: $color-dark-red
+			border: none
+			border-radius: 3px 0 0 3px
+			height: 35px
+
+		input[type="submit"]
+			width: 170px
+			border-radius: 0 3px 3px 0
+			height: 35px
+
+	.formTableCell
+		display: table-cell
+		vertical-align: bottom
+
+		label
+			margin-bottom: 8px
+
+		&.fullWidth
+			width: 100%
+
+	.formTable
+		display: table
+
+	.newsletter
+		float: none
+		margin: 0 10px
+
+		&.mobile
+			display: none
+
+	.phone
+		letter-spacing: 0.5px
+		@extend %dis-inline
+		margin-right: 20px
+
+	h2
+		font-weight: $weight-normal
+		color: $color-light-grey
+		font-size: 16px
+		@extend %dis-inline
+		margin-right: 10px
+		margin-bottom: 0
+
+	a
+		@extend %dis-inline
+		//margin-right: 10px
+
+	p
+		font-size: 14px
+		color: $color-grey
+		font-weight: 600
+		@extend %dis-inline
+		margin-bottom: 0
+
+	.address
+		font-size: 14px
+
+	.header2
+		font-family: "Oswald",sans-serif
+		text-transform: uppercase
+		font-weight: 400
+		color: #999
+		font-size: 16px
+		margin-right: 8px
+		margin-bottom: 0
+		@extend %desk--dis-none
+
+	.icon-facebook, .icon-twitter, .icon-instagram
+		color: #fff
+		font-size: 18px
+		+transition(all 0.3s)
+
+		a
+			margin: 0 !important
+
+		&:hover
+			opacity: 0.75
+
+.newsletter
+	margin-right: 0
+	font-weight: $weight-light
+	@extend %fr
+	font-family: $font-oswald
+
+.copyright
+	color: $color-light-grey
+	text-align: center
+	background-color: $color-med-grey
+	padding: 15px 0
+	height: 54px
+	z-index: 51
+	position: relative
+
+	p
+		margin: 0
+		font-size: 11px
+		color: $color-grey
+
+.break
+	@extend %dis-block
+	@extend %lap--dis-inline-block
+
+.hide-stuff
+	@extend %dis-none
+	@extend %lap--dis-inline-block
+
+
+.notification
+	background-color: #ffffff
+	text-align: center
+	margin: 0 auto
+
+	img
+		float: left
+		width: auto
+		padding: 15px 0
+		margin-right: 20px
+
+	.buttonBlack
+		float: right
+		width: 14%
+		padding: 10px
+		margin-top: 20px
+		color: #fff
+		background-color: #111
+		+transition(all 0.5s)
+
+		&:hover
+			background-color: #94152c
+			color: #fff
+
+.notification-mobile
+	display: none
+
+h4.notification
+	color: #94152c
+	text-align: left
+	float: left
+	padding: 30px 0
+	font-size: 20px
+	width: 65%
+
+// Tablet styling
+@media screen and (max-width: 1024px)
+	footer
+		text-align: center
+
+	.newsletter
+		float: none
+		margin: 0 19px
+
+// Mobile styling
+@media screen and (max-width: 768px)
+	footer
+		position: relative
+		bottom: 0
+		z-index: 0
+
+		p
+			margin: 0 0 10px 0
+
+		.phone, h2, a, p
+			display: block
+
+		.phone
+			font-size: 24px
+			margin: 0 0 10px 0
+
+		.address
+			margin: 0 0 10px 0
+
+		h2
+			margin: 20px 0 15px
+			font-size: 20px
+
+		a span
+			display: block
+
+		.icon-facebook, .icon-twitter, .icon-instagram
+			display: none
+
+		.subscribe
+			position: relative
+			display: none
+			height: auto
+			padding: 20px
+			top: 0
+			+transition(all 0)
+
+			.formTable, .formTableCell
+				display: block
+				width: auto
+
+			label
+				width: auto
+				margin: 0
+
+			input[type="submit"]
+				width: 100%
+				font-size: 16px
+				margin-bottom: 0
+				border-radius: 3px
+
+		.newsletter
+			font-size: 18px
+			display: none
+
+			&.mobile
+				display: block
+
+	.copyright
+		padding: 15px 0
+		height: auto
+
+		span
+			display: block
+
+	.notification
+		display: none
+
+	h4.notification
+		display: block
+		color: #94152c
+		text-align: center
+		float: none
+		font-size: 20px
+		width: 100%
+		padding: 10px 0 0 0
+
+
+	.notification-mobile
+		display: block
+		background-color: #ffffff
+		text-align: center
+		margin: 0 auto
+		height: auto
+
+
+		img
+			display: block
+			float: none
+			width: auto
+			padding: 20px
+			margin: 0 auto
+
+

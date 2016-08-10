@@ -1,0 +1,326 @@
+// General styling
+
+.homepage
+	width: 100%
+	@extend %cf
+	@extend %pos-rel
+	overflow: hidden
+	top: 0
+	bottom: 0
+
+	h1
+		font-size: 28px
+		margin: 60px 0 10px
+
+	h2
+		color: white
+		letter-spacing: 1px
+		font-size: 28px
+		+transition(all .5s)
+		position: relative
+		z-index: 100
+
+	.containerHome
+		@extend %cf
+		display: block
+		vertical-align: middle
+		width: 100%
+		margin: 0 auto
+		max-width: 1000px
+		overflow: hidden
+		position: relative
+		padding: 0 20px 420px 20px
+		z-index: 2
+
+		+media-query(lap)
+			padding: 0 20px
+
+	.hero
+		display: block
+		position: relative
+		overflow: hidden
+		top: 0
+		left: 0
+		background-image: url('../img/HeroBanner-plate.jpg')
+		background-position-x: right
+		background-position-y: 50%
+		background-repeat: no-repeat
+		background-size: cover
+		height: 60%
+		min-height: 450px
+		width: 100%
+		padding: 60px 0
+
+	.logoSection
+		float: left
+		width: 160px
+		margin-right: 40px
+		margin-top: 40px
+		text-align: center
+
+		img
+			margin-bottom: 15px
+
+	.content
+		float: left
+		width: 50%
+		max-width: 500px
+
+		h1, p
+			text-shadow: 1px 1px 1px black
+
+		p
+			margin-bottom: 15px
+			text-align: left
+
+		.icon-arrowDown
+			font-size: 40px
+			margin-top: 20px
+			display: none
+			text-align: center
+
+	.button.solid
+		margin: 0
+		width: 160px
+		display: inline-block
+
+	.three-columns
+		position: relative
+		bottom: 0
+		left: 0
+		height: 40%
+		width: 100%
+		overflow: hidden
+
+		a.col-link
+			@extend %one-whole
+			@extend %lap--one-third
+			@extend %fl
+			@extend %cf
+			@extend %pos-rel
+			margin: 0 !important
+			padding: 0
+			background-size: cover
+
+			// &.menu
+			// 	background-image: url('../img/HomeMenuOption.jpg')
+
+			// &.location
+			// 	background-image: url('../img/HomeLocationOption.jpg')
+
+			// &.reservation
+			// 	background-image: url('../img/HomeReservationOption.jpg')
+
+			.overlay
+				background-color: rgba(0, 0, 0, 0.25)
+
+			&:hover .overlay
+				background-color: rgba(0, 0, 0, 0.7)
+
+			&:hover
+				h2
+					+opacity(0)
+					+media-query(lap)
+						padding-top: 42px
+
+				img
+					+opacity(1)
+
+		.homeOption
+			padding-top: 0
+			text-align: center
+			display: block
+			height: 495px
+			position: relative
+			z-index: 4
+
+			h2, img
+				+transition(all .7s)
+
+			h2
+				font-weight: 400
+				
+				+media-query(lap)
+					padding-top: 110px
+					text-shadow: 0px 2px 1px #111111
+
+			img
+				position: relative
+				width: 50%
+				max-width: 270px
+				margin-top: -30px
+				padding-top: 40px
+				+opacity(0)
+
+
+			.button
+				display: none
+				position: relative
+				z-index: 100
+				width: 60%
+				max-width: 220px
+
+.plate
+	@extend %dis-none
+	@extend %desk--dis-block
+	@extend %pos-abs
+	right: 0
+	bottom: 0
+	width: 678px
+	height: 350px
+	z-index: 1
+
+	img
+		@extend %pos-abs
+		@extend %margin-off
+		height: 100%
+		width: 100%
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+
+
+@media screen and (max-width: 768px)
+
+	.homepage
+
+		.hero
+			position: relative
+			top: 0
+			left: 0
+			background-image: url('../img/HeroBanner-plate-mobile.jpg')
+			background-position: center bottom
+			padding: 40px 0 20px
+			height: auto
+
+			.logoSection
+				float: none
+				width: 100%
+				margin-top: 60px
+				margin: 0 auto
+				text-align: center
+
+				img
+					margin-bottom: 15px
+					width: 160px
+
+		.content
+			width: 100%
+			max-width: 500px
+			float: none
+			margin: 0 auto
+
+			p
+				text-align: center
+
+			.icon-arrowDown
+				display: block
+
+			h1
+				margin-top: 40px
+				text-align: center
+
+		.button.solid
+			margin: 0 auto
+			margin-top: 20px
+			width: 100%
+
+		.three-columns
+			position: relative
+			bottom: 0
+			left: 0
+			height: auto
+			width: 100%
+
+			.homeOption
+				padding: 40px 0
+				height: auto
+				width: 100%
+
+				h2
+					margin-top: 0
+
+				img
+					+opacity(1)
+
+				.overlay
+					background-color: rgba(0, 0, 0, 0.35)
+
+				.button
+					display: block
+
+	.notification
+		display: none
+
+		
+	.notification-mobile
+		display: block
+		background-color: #ffffff
+		height: auto
+		text-align: center
+		margin: 0 auto
+		margin-bottom: 20px
+
+		.buttonBlack
+			float: none
+			width: 100%
+			padding: 10px
+			margin-top: 20px
+			color: #fff
+			background-color: #111
+			+transition(all 0.5s)
+
+			&:hover
+				background-color: #94152c
+				color: #fff
+
+@media screen and (max-height: 800px) and (min-width: 841px)
+	.hero
+		max-height: 345px
+		min-height: 0 !important
+		padding: 40px 0 !important
+
+	.three-columns
+		//max-height: 330px
+		min-height: 0 !important
+
+		a.col-link
+			padding: 0 !important
+
+			h2
+				padding-top: 140px !important
+
+			&:hover
+				h2
+					padding-top: 0!important
+
+
+	.homepage
+		h1
+			margin-top: 20px
+
+		.logoSection
+			margin-top: 10px
+
+	.plate
+		height: 260px
+		width: 518px
+
+@media screen and (min-height: 1072px) and (min-width: 841px)
+
+	.homepage
+		position: absolute !important
+		top: 65px
+		bottom: 65px
+
+	.hero
+		height: 40%
+		max-height: 450px
+
+	.three-columns
+		height: 64% !important
+		a.col-link
+			height: 100%
+			min-height: 495px
+			padding: 10% 0

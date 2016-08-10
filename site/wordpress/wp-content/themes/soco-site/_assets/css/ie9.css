@@ -1,0 +1,7 @@
+.select.icon-arrowDown:before{
+	display: none;
+}
+
+.select.icon-arrowDown select{
+	padding-right: 0;
+}
