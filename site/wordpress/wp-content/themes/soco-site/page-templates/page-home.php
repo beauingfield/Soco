@@ -25,8 +25,11 @@ get_header();
 						<div class="content">
 							<h1><?php echo stripslashes(get_option('home_page_title')); ?></h1>
 							<p><?php echo stripslashes(get_option('home_page_text')); ?></p>
+							<p class="zagat">
+								<img src="<?php bloginfo('template_directory'); ?>/_assets/img/zagat1.png"/>
+							</p>
 							<a href="/reservations/" class="button solid">Make a Reservation</a>
-							<a href="/reservations/#group" class="button solid">Group Dining</a>
+							<a href="/reservations/#group" class="button solid group-diningc ">Group Dining</a>
 							<a href="#three-cols" class="icon-arrowDown"></a>
 						</div><!-- .content -->
 					</div><!-- .container -->
@@ -39,9 +42,9 @@ get_header();
 				
 				<div class="notification-mobile">
                     <div class="container">
-                    	<a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2015/2015-Dining-Awards/" target="_blank">
+                    	<a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2016/2016-Dining-Awards/" target="_blank">
 	                        <img class="notification" src="<?php bloginfo('template_directory'); ?>/_assets/img/orlando-mag-logo.jpg" alt="Orlando Magazine logo">
-	                        <h4 class="notification"><strong>Best New Restaurant and Best Chef</strong> - Orlando Magazine Dining Awards 2015</h4>
+	                        <h4 class="notification"><strong>Best Southern Restaurant</strong> - Orlando Magazine Dining Awards 2016</h4>
 	                        <div class="notification-mobile button buttonBlack">Read More</div>
 	                    </a>    
                     </div><!-- .container -->

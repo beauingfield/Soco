@@ -14,9 +14,9 @@
 	
 	    <div class="notification">
             <div class="container">
-                <a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2015/2015-Dining-Awards/" target="_blank">
+                <a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2016/2016-Dining-Awards/" target="_blank">
                 	<img class="notification" src="<?php bloginfo('template_directory'); ?>/_assets/img/orlando-mag-logo.jpg" alt="Orlando Magazine logo">
-                	<h4 class="notification"><strong>Best New Restaurant and Best Chef</strong> - Orlando Magazine Dining Awards 2015</h4>
+                	<h4 class="notification"><strong>Best Southern Restaurant</strong> - Orlando Magazine Dining Awards 2016</h4>
                 	<div class="notification button buttonBlack">Read More</div>
                 </a>	
             </div><!-- .container -->
@@ -61,7 +61,7 @@
 					<a href="http://instagram.com/socothorntonpark" target="_blank"> <span class="icon-instagram"></span></a>
 				</div><!-- .container -->
 				<div class="container">
-					<p><span class="break">Open Daily 5:00pm - 10:00pm</span> <span class="hide-stuff">|</span> <span class="break">Sunday Brunch 11:00am - 3:00pm</span> <span class="hide-stuff">|</span> © 2014 Soco Restaurant</p>
+					<p><span class="break">Open Daily 5:00pm - 10:00pm</span> <span class="hide-stuff">|</span> <span class="break">Sunday Brunch 11:00am - 3:00pm</span> <span class="hide-stuff">|</span> © 2016 Soco Restaurant</p>
 				</div><!-- .container -->
 			</div>
 		</div>
