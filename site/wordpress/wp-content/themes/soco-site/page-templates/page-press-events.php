@@ -35,6 +35,7 @@ get_header(); ?>
 						<?php endwhile;
 
 					?>
+				</div>	
 
 			<a href="/culture/">
 				<div class="nextPage culture">
