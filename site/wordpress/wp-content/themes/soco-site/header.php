@@ -22,6 +22,16 @@
 	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	<link href='<?php bloginfo('template_directory'); ?>/_assets/css/screen.css' rel='stylesheet' type='text/css'>
 
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="apple-mobile-web-app-title" content="Soco Restaurant">
+	<meta name="application-name" content="Soco Restaurant">
+	<meta name="theme-color" content="#ffffff">
+
 	<!--[if lt IE 9]>
 		<script src="<?php bloginfo('template_directory'); ?>/_assets/js/html5.js"></script>
 		<link href='<?php bloginfo('template_directory'); ?>/_assets/css/ie.css' rel='stylesheet' type='text/css'>
@@ -42,7 +52,7 @@
 			<div class="container-logo">
 				<div class="header-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img class="logoText" src="<?php bloginfo('template_directory'); ?>/_assets/img/SOCO-Text-Left.png" title="SOCO Southern Contemporary Cuisine" alt="SOCO Southern Contemporary Cuisine">
+						<img class="logoText" src="<?php bloginfo('template_directory'); ?>/_assets/img/SOCO-Text-Left.png" title="Soco Southern Contemporary Cuisine" alt="Soco Southern Contemporary Cuisine">
 					</a>
 				</div>
 			</div>
@@ -54,7 +64,7 @@
 
 				<?php if(!is_front_page()): ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img class="logoMobile" src="<?php bloginfo('template_directory'); ?>/_assets/img/mobile-logo.png" title="SOCO Southern Contemporary Cuisine" alt="SOCO Southern Contemporary Cuisine" width="66" height="66" />
+						<img class="logoMobile" src="<?php bloginfo('template_directory'); ?>/_assets/img/mobile-logo.png" title="SOCO Southern Contemporary Cuisine" alt="Soco Southern Contemporary Cuisine" width="66" height="66" />
 					</a>
 				<?php endif; ?>
 
@@ -87,8 +97,8 @@
 			<div class="container">
 				<div class="locationInfo">
 					<a class="phone" href="tel:<?php echo preg_replace('/\D+/', '', get_option('soco_phone')); ?>"><?php echo get_option('soco_phone'); ?></a>
-					<p>Marketing Coordinator Shannon Corrigan: <a href="#" class="hoverLink"><strong><?php echo get_option('soco_marketing_email'); ?></strong></a></p>
-					<p>General Manager Scott Mercure: <a href="#" class="hoverLink"><strong><?php echo get_option('soco_operations_email'); ?></strong></a></p>
+					<p>Marketing Coordinator – Liz Mathieson: <a href="mailto:liz@thorntonparkrg.com" class="hoverLink"><strong>liz@thorntonparkrg.com<!--<?php echo get_option('soco_marketing_email'); ?>--></strong></a></p>
+					<p>Restaurant Manager – Aristede M. Collins: <a href="mailto:aristede@socothorntonpark.com" class="hoverLink"><strong>aristede@socothorntonpark.com<!--<?php echo get_option('soco_operations_email'); ?>--></strong></a></p>
 					<a href="https://www.facebook.com/pages/Soco-Thornton-Park/837419106286087" target="_blank"> <span class="icon-facebook"></span></a>
 					<a href="https://twitter.com/SOCOThorntonPk" target="_blank"> <span class="icon-twitter"></span></a>
 					<a href="http://instagram.com/socothorntonpark" target="_blank"> <span class="icon-instagram"></span></a>

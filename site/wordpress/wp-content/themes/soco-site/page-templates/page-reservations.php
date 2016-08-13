@@ -144,10 +144,10 @@ get_header();
 
 	<a href="/press-events/">
 		<div class="nextPage news">
-			<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextEvents.jpg" alt="Press and Events" class="bg-ie" />
+			<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextEvents.jpg" alt="Recognition" class="bg-ie" />
 			<div class="container">
 				<span class="icon-arrowDown"></span>
-				<h3>Press &amp; Events</h3>
+				<h3>Recognition</h3>
 				<img src="<?php bloginfo('template_directory' ); ?>/_assets/img/Type-Events.png">
 			</div><!-- .container -->
 			<div class="overlay"></div>
