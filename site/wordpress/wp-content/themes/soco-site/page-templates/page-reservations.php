@@ -142,7 +142,7 @@ get_header();
 		</div><!-- .container -->
 	</div><!-- .reservationsPage -->
 
-	<a href="/press-events/">
+	<a href="/recognition/">
 		<div class="nextPage news">
 			<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextEvents.jpg" alt="Recognition" class="bg-ie" />
 			<div class="container">

@@ -37,7 +37,7 @@ get_header(); ?>
 					?>
 				</div>	
 
-			<a href="/culture/">
+			<a href="/events-and-culture/">
 				<div class="nextPage culture">
 					<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextCulture.jpg" alt="Events & Culture" class="bg-ie" />
 					<div class="container">
