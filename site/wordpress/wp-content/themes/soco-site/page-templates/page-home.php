@@ -45,8 +45,11 @@ get_header();
                     	<a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2016/2016-Dining-Awards/" target="_blank">
 	                        <img class="notification" src="<?php bloginfo('template_directory'); ?>/_assets/img/orlando-mag-logo.jpg" alt="Orlando Magazine logo">
 	                        <h4 class="notification"><strong>Best Southern Restaurant</strong> - Orlando Magazine Dining Awards 2016</h4>
-	                        <div class="notification-mobile button buttonBlack">Read More</div>
-	                    </a>    
+	                        <div class="notification-mobile button buttonBlack">Read More</div>	                        
+	                    </a>
+	                    <a href="<?php bloginfo('template_directory'); ?>/_assets/pdf/magicalDining.pdf" target="_blank">
+		                	<img class="notification right" src="<?php bloginfo('template_directory'); ?>/_assets/img/magical-dining2.jpg" alt="Magical Dining logo">
+		                </a>
                     </div><!-- .container -->
                 </div><!-- .notification-mobile -->
 

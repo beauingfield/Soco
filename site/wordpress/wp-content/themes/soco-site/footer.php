@@ -12,13 +12,17 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	
-	    <div class="notification">
+	    <div class="notification">	    	
+	    	<a href="<?php bloginfo('template_directory'); ?>/_assets/pdf/magicalDining.pdf" target="_blank">
+            	<img class="notification right" src="<?php bloginfo('template_directory'); ?>/_assets/img/magical-dining2.jpg" alt="Magical Dining logo">
+            </a>
+            <h5 class="notification"><strong>View PDF </strong> <span class="icon-arrowRight"></span></h5>
             <div class="container">
                 <a href="http://www.orlandomagazine.com/Orlando-Magazine/May-2016/2016-Dining-Awards/" target="_blank">
                 	<img class="notification" src="<?php bloginfo('template_directory'); ?>/_assets/img/orlando-mag-logo.jpg" alt="Orlando Magazine logo">
                 	<h4 class="notification"><strong>Best Southern Restaurant</strong> - Orlando Magazine Dining Awards 2016</h4>
                 	<div class="notification button buttonBlack">Read More</div>
-                </a>	
+                </a>				
             </div><!-- .container -->
         </div><!-- .notification -->
 	

@@ -51,7 +51,7 @@ footer
 
 	.subscribe
 		background-color: $color-red
-		padding: 11px 0
+		padding: 3px 0
 		height: 80px
 		width: 100%
 		z-index: 50
@@ -179,19 +179,21 @@ footer
 	background-color: #ffffff
 	text-align: center
 	margin: 0 auto
-	margin-bottom: -4px
+	height: 60px
 
 	img
 		float: left
 		width: auto
-		padding: 15px 0
+		max-width: 120px
+		padding: 13px 0
 		margin-right: 20px
 
 	.buttonBlack
-		float: right
-		width: 14%
+		float: left
+		width: 10%
+		height: auto
 		padding: 10px
-		margin-top: 20px
+		margin-top: 9px
 		color: #fff
 		background-color: #111
 		+transition(all 0.5s)
@@ -200,6 +202,12 @@ footer
 			background-color: #94152c
 			color: #fff
 
+	.right
+		float: right
+		max-width: 137px
+		padding: 0
+		margin-right: 0
+
 .notification-mobile
 	display: none
 
@@ -207,9 +215,17 @@ h4.notification
 	color: #94152c
 	text-align: left
 	float: left
-	padding: 30px 0
+	padding: 17px 0
+	margin-right: 20px
 	font-size: 20px
-	width: 65%
+	//width: 65%
+
+h5.notification
+	color: #94152c
+	float: right
+	font-size: 14px
+	padding-top: 23px
+	margin-right: 10px
 
 // Tablet styling
 @media screen and (max-width: 1024px)
@@ -310,8 +326,9 @@ h4.notification
 		img
 			display: block
 			float: none
-			width: auto
-			padding: 20px
+			width: 50%
+			height: auto
+			padding: 20px 0
 			margin: 0 auto
 
 
