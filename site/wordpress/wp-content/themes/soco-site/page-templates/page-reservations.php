@@ -132,7 +132,7 @@ get_header();
 					<div class="special-contact">
 						<div class="thankyou-message">
 							<p class="phone">Email us at</p>
-							<p><a href="mailto:shannon@thorntonparkrg.com">shannon@thorntonparkrg.com</a></p>
+							<p><a href="mailto:liz@thorntonparkrg.com">liz@thorntonparkrg.com</a></p>
 							<p class="phone">Or give us a call<a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a></p>
 						</div>
 					</div>
