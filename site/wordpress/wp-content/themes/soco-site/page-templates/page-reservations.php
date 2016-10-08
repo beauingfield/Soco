@@ -128,6 +128,11 @@ get_header();
 						<label>Contact Us with Your Request</label>
 						<p>True southern hospitality is in the details, and we handle them all for you. Our semi-private dining room accommodates up to 30 guests and is the perfect location for your cocktail party or sit-down dinner. Our dedicated team strives to serve up the best in quality and service for you and your guests.</p>
 						<p><a href="<?php bloginfo('template_directory'); ?>/_assets/pdf/group.pdf" class="button solid">Group Dining Package</a></p>
+
+						<h2>Google 360° Walkthrough</h2>
+						<a href="https://www.google.com/maps/place/Soco+Restaurant/@28.542435,-81.3686923,3a,75y,351h,90t/data=!3m8!1e1!3m6!1slYnPcGj2dtEAAAQvvJ_Dkw!2e0!3e2!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3DlYnPcGj2dtEAAAQvvJ_Dkw%26output%3Dthumbnail%26cb_client%3Dsearch.TACTILE.gps%26thumb%3D2%26w%3D129%26h%3D106%26yaw%3D351.11292%26pitch%3D0!7i13312!8i6656!4m5!3m4!1s0x0:0x6a3e6d1244b504b4!8m2!3d28.5424964!4d-81.3686595!6m1!1e1" target="_blank">
+							<img style="border: none; text-align: left; float: left; width: 100%;" src="<?php bloginfo('template_directory'); ?>/_assets/img/google360-lg.png" alt="Google 360 Walkthrough">
+						</a>
 					</div>
 					<div class="special-contact">
 						<div class="thankyou-message">
@@ -138,7 +143,7 @@ get_header();
 					</div>
 				</div>
 			</div><!-- #Room.tabDisplay -->
-
+ 
 		</div><!-- .container -->
 	</div><!-- .reservationsPage -->
 
