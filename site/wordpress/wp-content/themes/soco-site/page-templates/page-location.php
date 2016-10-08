@@ -22,8 +22,6 @@ get_header(); ?>
 
 						<div class="column three-fifths">
 
-
-
 							<div class="cf">
 								<div class="mapAddress">
 									<div class="address-wrap">
@@ -37,6 +35,12 @@ get_header(); ?>
 									</div>
 								</div>
 								<div id="map_canvas2"></div>
+							</div>
+
+							<h2>Google 360° Walkthrough</h2>
+							<p>View our new virtual walkthrough on Google maps!</p>
+							<div class="button-wrap">
+								<a href="https://www.google.com/maps/place/Soco+Restaurant/@28.542435,-81.3686923,3a,75y,351h,90t/data=!3m8!1e1!3m6!1slYnPcGj2dtEAAAQvvJ_Dkw!2e0!3e2!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3DlYnPcGj2dtEAAAQvvJ_Dkw%26output%3Dthumbnail%26cb_client%3Dsearch.TACTILE.gps%26thumb%3D2%26w%3D129%26h%3D106%26yaw%3D351.11292%26pitch%3D0!7i13312!8i6656!4m5!3m4!1s0x0:0x6a3e6d1244b504b4!8m2!3d28.5424964!4d-81.3686595!6m1!1e1" target="_blank" class="button">View 360°</a>
 							</div>
 
 							<h2>Parking</h2>
@@ -69,8 +73,8 @@ get_header(); ?>
 								</form>
 
 								<div class="emails">
-									<p>Marketing Coordinator - Shannon Corrigan: <a href="mailto:<?php echo get_option('soco_marketing_email'); ?>" class="hoverLink"><strong><?php echo get_option('soco_marketing_email'); ?></strong></a></p>
-									<p>General Manager - Scott Mercure: <a href="mailto:<?php echo get_option('soco_operations_email'); ?>" class="hoverLink"><strong><?php echo get_option('soco_operations_email'); ?></strong></a></p>
+									<p>Marketing Coordinator – Liz Mathieson: <a href="mailto:liz@thorntonparkrg.com" class="hoverLink"><strong>liz@thorntonparkrg.com</strong></a></p>
+									<p>Restaurant Manager – Aristede M. Collins: <a href="mailto:aristede@socothorntonpark.com" class="hoverLink"><strong>aristede@socothorntonpark.com</strong></a></p>
 								</div>
 
 								<div class="social">
