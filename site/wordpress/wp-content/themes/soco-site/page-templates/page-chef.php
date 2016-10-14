@@ -30,7 +30,7 @@ get_header();
 						<div class="column one-half">
 							<span class="divider"></span>
 							<h2>Chef's Story</h2>
-							<p>Executive Chef Greg Richie is well known as the man who fronted Orlando restaurants 
+							<p>Executive Chef/Partner Greg Richie is well known as the man who fronted Orlando restaurants 
 							for celebrity chefs Emeril Lagasse and Roy Yamaguchi. With Soco, he returns to 
 							his Southern roots with a contemporary interpretation of one of America’s classic 
 							cuisines.</p>
