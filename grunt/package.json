@@ -2,7 +2,7 @@
   "name": "Soco",
   "version": "0.1.0",
   "private": true,
-  "authors": "Ascentus Design Team",
+  "authors": "Ascentus Design Team, Beau Wingfield",
   "description": "Soco Site",
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/ascentus/soco-site.git"
+    "url": "https://github.com/beauingfield/Soco"
   },
   "engines": {
     "node": ">=0.8.0"
