@@ -251,7 +251,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['compass', 'uglify', 'concat', 'copy', 'watch']);
-	grunt.registerTask('images', ['imagemin']);
+	grunt.registerTask('default', ["compass", "uglify", "concat", "copy", "watch"]);
+	grunt.registerTask('images', ["imagemin"]);
 
 };
