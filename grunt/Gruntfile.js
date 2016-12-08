@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* MERGE OR "CONCATENATE" JS FILES */
+		/* MERGE OR 'CONCATENATE' JS FILES */
 		concat: {
 			options: {
 				separator: ''
@@ -51,17 +51,17 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* COMPRESS IMAGES */
-		imagemin: {
-			dynamic: {
-				files: [{
-					expand: true,
-					cwd: 'img/uncompressed',
-					src: ['**/*.{png,jpg,gif}'],
-					dest: 'img/compressed/'
-				}]
-			}
-		},
+		// /* COMPRESS IMAGES */
+		// imagemin: {
+		// 	dynamic: {
+		// 		files: [{
+		// 			expand: true,
+		// 			cwd: 'img/uncompressed',
+		// 			src: ['**/*.{png,jpg,gif}'],
+		// 			dest: 'img/compressed/'
+		// 		}]
+		// 	}
+		// },
 
 
 		/* COPY FILES THAT HAVE BEEN GENERATED IN THE GRUNT FOLDER */
@@ -241,17 +241,17 @@ module.exports = function(grunt) {
 			jscopy: {
 				files: ['js/main.js', 'js/maps.js'],
 				tasks: ['copy:js']
-			},
-
-			// Watch if images have changed
-			imagemin: {
-				files: ['img/uncompressed/**/*.*'],
-				tasks: ['imagemin', 'copy:images']
 			}
+
+			// // Watch if images have changed
+			// imagemin: {
+			// 	files: ['img/uncompressed/**/*.*'],
+			// 	tasks: ['imagemin', 'copy:images']
+			// }
 		}
 	});
 
 	grunt.registerTask('default', ['compass', 'uglify', 'concat', 'copy', 'watch']);
-	grunt.registerTask('images', ['imagemin']);
+	// grunt.registerTask('images', ['imagemin']);
 
 };
