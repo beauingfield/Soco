@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* MERGE OR "CONCATENATE" JS FILES */
+		/* MERGE OR 'CONCATENATE' JS FILES */
 		concat: {
 			options: {
 				separator: ''
@@ -228,17 +228,17 @@ module.exports = function(grunt) {
 			jscopy: {
 				files: ['js/main.js', 'js/maps.js'],
 				tasks: ['copy:js']
-			},
-
-			// Watch if images have changed
-			imagemin: {
-				files: ['img/uncompressed/**/*.*'],
-				tasks: ['imagemin', 'copy:images']
 			}
+
+			// // Watch if images have changed
+			// imagemin: {
+			// 	files: ['img/uncompressed/**/*.*'],
+			// 	tasks: ['imagemin', 'copy:images']
+			// }
 		}
 	});
 
-	grunt.registerTask('default', ["compass", "uglify", "concat", "copy", "watch"]);
-	grunt.registerTask('images', ["imagemin"]);
+	grunt.registerTask('default', ['compass', 'uglify', 'concat', 'copy', 'watch']);
+	// grunt.registerTask('images', ['imagemin']);
 
 };
