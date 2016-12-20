@@ -112,7 +112,7 @@ get_header();
 				</form>
 				<div class="column two-thirds">
 					<p class="reservationParagraph">Although we provide the Open Table reservation
-						system for your convenience, it is always our pleasure to speak with your
+						system for your convenience, it is always our pleasure to speak with you
 						directly. Give us a call at
 						<a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a>
 						. For parties of 6 or more, please call the restaurant.
