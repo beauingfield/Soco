@@ -103,7 +103,6 @@ get_header(); ?>
 
 					</div>
 
-
 					<div class="content">
 
 						<h2>Directions</h2>
