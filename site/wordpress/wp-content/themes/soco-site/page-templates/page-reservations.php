@@ -2,7 +2,6 @@
 
 /*
  * Template Name: Soco Reservations Page
- *
  */
 
 get_header();
@@ -16,9 +15,7 @@ get_header();
 			<ul class="optionSelect">
 				<li><a class="tab active" href="#Main">Make A Reservation</a></li>
 				<li><a class="tab" data-tab="group" href="#Room">Group Dining</a></li>
-				<!-- <li><a class="tab" href="#Special">Special Events</a></li> -->
 			</ul>
-
 
 			<?php /*  ?><div id="OT_searchWrapperAll">
 				<script type="text/javascript" src="https://secure.opentable.com/ism/default.aspx?rid=150973&restref=150973&mode=horiz-transparent-white&hover=1"></script>
@@ -33,6 +30,7 @@ get_header();
 				</div>
 			</div>
 			<?php */ ?>
+
 			<div id="Main" class="tabDisplay active">
 				<form class="reservation" role="form" method="post" action="https://secure.opentable.com/ism/interim.aspx" name="form" target="_blank">
 					<input type="hidden" class="OT_hidden" name="RestaurantID" value="150973">
@@ -57,7 +55,6 @@ get_header();
 									var prePopulatedDate = ('0' + (newDate.getMonth() + 1)).slice(-2) + "/" + ('0'+newDate.getDate()).slice(-2) + '/' + newDate.getFullYear();
 									$('#ReservationDate').val(prePopulatedDate);
 								});
-
 
 							</script>
 						</div><!-- .select -->
@@ -114,19 +111,24 @@ get_header();
 
 				</form>
 				<div class="column two-thirds">
-					<p class="reservationParagraph">Although we provide the Open Table reservation system for your convenience, it is always our pleasure to speak with your directly. Give us a call at <a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a>. For parties of 6 or more, please call the restaurant.</p>
+					<p class="reservationParagraph">Although we provide the Open Table reservation
+						system for your convenience, it is always our pleasure to speak with your
+						directly. Give us a call at
+						<a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a>
+						. For parties of 6 or more, please call the restaurant.
+					</p>
 				</div>
 
-				<!-- <div class="column two-thirds">
-					<p class="phone">Give us a call</p>
-				</div> -->
 			</div><!-- #Main.tabDisplay -->
 
 			<div id="Room" class="tabDisplay">
 				<div class="grid">
 					<div class="reservation special">
 						<label>Contact Us with Your Request</label>
-						<p>True southern hospitality is in the details, and we handle them all for you. Our semi-private dining room accommodates up to 30 guests and is the perfect location for your cocktail party or sit-down dinner. Our dedicated team strives to serve up the best in quality and service for you and your guests.</p>
+						<p>True southern hospitality is in the details, and we handle them all for you.
+							Our semi-private dining room accommodates up to 30 guests and is the perfect
+							location for your cocktail party or sit-down dinner. Our dedicated team strives
+							to serve up the best in quality and service for you and your guests.</p>
 						<p><a href="<?php bloginfo('template_directory'); ?>/_assets/pdf/group.pdf" class="button solid">Group Dining Package</a></p>
 
 						<h2>Google 360° Walkthrough</h2>
@@ -137,13 +139,13 @@ get_header();
 					<div class="special-contact">
 						<div class="thankyou-message">
 							<p class="phone">Email us at</p>
-							<p><a href="mailto:liz@thorntonparkrg.com">liz@thorntonparkrg.com</a></p>
+							<p><a href="mailto:andre@socothorntonpark.com">andre@socothorntonpark.com</a></p>
 							<p class="phone">Or give us a call<a href="tel:<?php echo $phone; ?>" class="hoverLink"><?php echo $phone; ?></a></p>
 						</div>
 					</div>
 				</div>
 			</div><!-- #Room.tabDisplay -->
- 
+
 		</div><!-- .container -->
 	</div><!-- .reservationsPage -->
 

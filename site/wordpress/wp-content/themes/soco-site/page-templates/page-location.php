@@ -72,8 +72,8 @@ get_header(); ?>
 								</form>
 
 								<div class="emails">
-									<p>Marketing Coordinator – Liz Mathieson: <a href="mailto:liz@thorntonparkrg.com" class="hoverLink"><strong>liz@thorntonparkrg.com</strong></a></p>
 									<p>Restaurant Manager – Aristede M. Collins: <a href="mailto:aristede@socothorntonpark.com" class="hoverLink"><strong>aristede@socothorntonpark.com</strong></a></p>
+									<p>Andre: <a href="mailto:andre@socothorntonpark.com" class="hoverLink"><strong>andre@socothorntonpark.com</strong></a></p>
 								</div>
 
 								<div class="social">

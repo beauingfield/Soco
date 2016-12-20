@@ -51,19 +51,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* COMPRESS IMAGES */
-		imagemin: {
-			dynamic: {
-				files: [{
-					expand: true,
-					cwd: 'img/uncompressed',
-					src: ['**/*.{png,jpg,gif}'],
-					dest: 'img/compressed/'
-				}]
-			}
-		},
-
-
 		/* COPY FILES THAT HAVE BEEN GENERATED IN THE GRUNT FOLDER */
 		copy: {
 

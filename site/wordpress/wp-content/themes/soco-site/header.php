@@ -59,9 +59,7 @@
 		<?php endif; ?>
 
 		<header class="header">
-
 			<div class="container">
-
 				<?php if(!is_front_page()): ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="logoMobile" src="<?php bloginfo('template_directory'); ?>/_assets/img/mobile-logo.png" title="SOCO Southern Contemporary Cuisine" alt="Soco Southern Contemporary Cuisine" width="66" height="66" />
@@ -74,9 +72,7 @@
 				<a href="#MobileNav" class="triggerActive mobile-menu">
 					<div class="icon-menu"></div>
 				</a>
-
 			</div>
-
 		</header>
 
 		<nav class="navigation  <?php if(is_front_page()): ?>headerHome<?php endif ?>" id="MobileNav" role="navigation">
@@ -97,8 +93,8 @@
 			<div class="container">
 				<div class="locationInfo">
 					<a class="phone" href="tel:<?php echo preg_replace('/\D+/', '', get_option('soco_phone')); ?>"><?php echo get_option('soco_phone'); ?></a>
-					<p>Marketing Coordinator – Liz Mathieson: <a href="mailto:liz@thorntonparkrg.com" class="hoverLink"><strong>liz@thorntonparkrg.com<!--<?php echo get_option('soco_marketing_email'); ?>--></strong></a></p>
 					<p>Restaurant Manager – Aristede M. Collins: <a href="mailto:aristede@socothorntonpark.com" class="hoverLink"><strong>aristede@socothorntonpark.com<!--<?php echo get_option('soco_operations_email'); ?>--></strong></a></p>
+					<p>Andre: <a href="mailto:andre@socothorntonpark.com" class="hoverLink"><strong>andre@socothorntonpark.com<!--<?php echo get_option('soco_marketing_email'); ?>--></strong></a></p>
 					<a href="https://www.facebook.com/pages/Soco-Thornton-Park/837419106286087" target="_blank"> <span class="icon-facebook"></span></a>
 					<a href="https://twitter.com/SOCOThorntonPk" target="_blank"> <span class="icon-twitter"></span></a>
 					<a href="http://instagram.com/socothorntonpark" target="_blank"> <span class="icon-instagram"></span></a>
