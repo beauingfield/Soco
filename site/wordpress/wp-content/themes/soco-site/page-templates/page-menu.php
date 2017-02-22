@@ -67,7 +67,7 @@ get_header(); ?>
 															$container = '';
 															$closingContainer = '';
 															//Set the container we want to inject here, then spit them out when they have stuff in them.
-															if($term->slug == 'feature' || $term->slug =='sparkling-wine') {
+															if($term->slug == 'feature' || $term->slug =='sparkling-wine' || $term->slug =='feature-dessert') {
 																$container = '<div class="feature"><div class="feature-container">';
 																$closingContainer = '</div></div>';
 															}
@@ -82,8 +82,8 @@ get_header(); ?>
 </span>';
 															elseif($term->slug === 'coffee'):
 																echo '<h2>'.$term->name.'</h2>';
-																echo '<span class="price" style="margin-left: 0; margin-bottom: 0; display: block; postition: relative;">7</span>';
-																echo '<em class="dishDescription" style="margin-left: 0; margin-bottom: 14px; display: block; postition: relative; font-size: 14px; color: #111;">Coffee Sourced Through Lineage at East End Market</em>';
+																// echo '<span class="price" style="margin-left: 0; margin-bottom: 0; display: block; postition: relative;">7</span>';
+																// echo '<em class="dishDescription" style="margin-left: 0; margin-bottom: 14px; display: block; postition: relative; font-size: 14px; color: #111;">Coffee Sourced Through Lineage at East End Market</em>';
 															else:
 																echo '<h2>'.$term->name.'</h2>';
 															endif;
