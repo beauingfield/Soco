@@ -1,6 +1,6 @@
 /*
  * Soco
- * http://www.socothorntonparkrg.org
+ * http://www.socothorntonparkrg.com
  *
  * Copyright (c) 2014 Joel Lopez, Ascentus LLC
  * Not licensed for public use
@@ -48,6 +48,17 @@ module.exports = function(grunt) {
 			dev: {
 				src: ['js/min/**/*.js', '!js/min/maps.js', '!js/min/html5.js', '!js/min/respond.min.js', '!js/min/jquery.backgroundSize.js'],
 				dest: 'js/main.js'
+			}
+		},
+
+		/* MERGE OR 'CONCATENATE' SASS FILES */
+		concat: {
+			options: {
+				separator: ''
+			},
+			dev: {
+				src: ['sass/components/*.sass', '!sass/base/*.sass', '!sass/kraken/**/*.sass'],
+				dest: '../site/wordpress/wp-content/themes/soco-site/_assets/css/screen.css'
 			}
 		},
 
@@ -206,6 +217,12 @@ module.exports = function(grunt) {
 				tasks: ['compass']
 			},
 
+			// Watch SASS (compressed) files, and merge them
+			cssconcat: {
+				files: ['sass/**/*.css'],
+				tasks: ['concat']
+			},
+
 			// Watch Generated CSS files
 			css: {
 				files: ['css/*.css'],
@@ -240,5 +257,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['compass', 'uglify', 'concat', 'copy', 'watch']);
 	// grunt.registerTask('images', ['imagemin']);
+	// grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 };
