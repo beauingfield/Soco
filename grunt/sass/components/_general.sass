@@ -217,11 +217,14 @@ img
 
 	&:hover
 		.overlay
-			+opacity(.5)
+			+opacity(.8)
 
 		img
 			+opacity(1)
 			margin-top: 0px
+			background-position: top
+			background-repeat: no-repeat
+			background-size: auto
 
 		h3
 			+opacity(0)
@@ -269,7 +272,7 @@ img
 	width: 100%
 	height: 100%
 	background-color: #000
-	+opacity(.7)
+	+opacity(.5)
 	z-index: 3
 
 .overlay,
@@ -529,7 +532,7 @@ input[type="submit"]
 	.nextPage img
 		+opacity(1)
 		margin-top: 0
-		
+
 
 // Mobile styling
 @media screen and (max-width: 768px)
@@ -573,7 +576,7 @@ input[type="submit"]
 		width: 100%
 		float: none
 		margin-bottom: 20px
-		
+
 
 	.container
 		width: 100%

@@ -6,6 +6,8 @@
 	background-attachment: fixed
 	background-repeat: no-repeat
 	background-size: cover
+	padding-top: 1px
+	height: 100%
 
 	h2
 		margin-bottom: 10px
@@ -37,7 +39,7 @@ h4.date
 
 .eventImage
 	margin: 0
-	
+
 	img
 		margin: 0
 
@@ -74,7 +76,7 @@ h4.date
 		&.mobile
 			@extend %dis-block
 			@extend %lap--dis-none
-	
+
 .readMore
 	background-color: $color-dark-red
 	position: fixed
@@ -125,16 +127,16 @@ h4.date
 
 		img
 			margin: 0
-	
+
 	.readMoreDate, .readMoreWhen, .readMoreWhere, .readMoreWhat
 		display: table-cell
 		padding: 10px 10px 0
 		vertical-align: top
-	
+
 	.readMoreWhen, .readMoreWhere
 		font-family: $font-oswald
 		font-weight: $weight-normal
-		
+
 		p
 			font-size: 18px
 
@@ -191,7 +193,7 @@ h4.date
 		span
 			font-weight: $weight-bold
 			font-style: italic
-	
+
 	h3, p
 		width: 80%
 
@@ -200,12 +202,12 @@ h4.date
 		position: absolute
 		right: 0
 		bottom: 5px
-	
+
 .nextPage.chef img
 	max-width: 300px
 
 .nextPage.culture
-	margin-top: 60px	
+	margin-top: 60px
 
 @media screen and (max-width: 768px)
 	.eventDetails
@@ -230,7 +232,7 @@ h4.date
 			right: auto
 			bottom: auto
 			margin-left: 0
-	
+
 	.readMoreMobile
 		margin-bottom: 20px
 
@@ -259,9 +261,9 @@ h4.date
 			display: block
 			width: 100%
 			margin: 20px 0 30px
-	
+
 	.nextPage.chef img
-		max-width: 60%	
+		max-width: 60%
 
 @media screen and (max-width: 640px)
 	.eventDate
@@ -328,4 +330,3 @@ h4.date
 			&.email
 				@extend %margin-off-bottom
 				width: 100%
-
