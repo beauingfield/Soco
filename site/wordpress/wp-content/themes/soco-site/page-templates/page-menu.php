@@ -75,7 +75,7 @@ get_header(); ?>
 															echo $container;
 															if($term->slug === 'house-cocktails' || $term->slug === 'house-cocktails-brunch'):
 																echo '<h2>'.$term->name.'</h2>';
-																echo '<span class="price" style="margin-left: 0; margin-bottom: 14px; display: block; postition: relative;">12</span>';
+																// echo '<span class="price" style="margin-left: 0; margin-bottom: 14px; display: block; postition: relative;">12</span>';
 															elseif($term->slug === 'brunch-cocktails'):
 																echo '<h2>'.$term->name.'</h2>';
 																echo '<span class="price" style="margin-left: 0; margin-bottom: 14px; display: block; postition: relative;">Prices by Single Cocktail/1L Pitcher

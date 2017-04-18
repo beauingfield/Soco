@@ -9,9 +9,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="newsPage">
-				<img src="<?php bloginfo('template_directory'); ?>/_assets/img/FunStuffBackground.jpg" alt="Press and Events" class="bg-ie" />
+				<img src="<?php bloginfo('template_directory'); ?>/_assets/img/FunStuffBackground.jpg" alt="Press" class="bg-ie" />
 				<div class="container">
 					<h1><?php echo get_the_title(); ?><span class="icon-logoFlourish"></span></h1>
+					<div class="featurePressContainer">
+						<div class="featurePress">
+							<link href="https://cdn.otstatic.com/dcwidget/2017/dinerschoicebadges.css" rel="stylesheet" type="text/css" /><a href="http://www.opentable.com/restaurant/profile/FS320220/reserve?rid=FS320220&restref=FS320220"class="ot-dc-badge ot-dc-badge--p"> </a>
+						</div>
+					</div>
 					<?php
 						$args = array( 'post_type' => 'soco_press_pt' );
 						$loop = new WP_Query( $args );
@@ -19,7 +24,7 @@ get_header(); ?>
 							<?php
 								global $post;
 								$id = $post->ID;
-//								print_r(get_post_custom($id));
+								// print_r(get_post_custom($id));
 							?>
 							<div class="listEntry">
 								<h3><a href="<?php echo get_post_meta($id, 'Press Link',  true); ?>" target="_blank" rel="nofollow"><?php echo the_title(); ?></a></h3>
@@ -29,6 +34,7 @@ get_header(); ?>
 						<?php endwhile;
 					?>
 				</div>
+
 			<a href="/events-and-culture/">
 				<div class="nextPage culture">
 					<img src="<?php bloginfo('template_directory'); ?>/_assets/img/NextCulture.jpg" alt="Events & Culture" class="bg-ie" />
